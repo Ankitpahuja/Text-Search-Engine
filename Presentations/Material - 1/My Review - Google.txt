@@ -1,0 +1,51 @@
+Google - A case study
+
+Overview:
+"Google" derived from the word "googol" which refers to 10^100. Google is a web search engine and for a web search engine; few must have features are:
+- Fast crawling technology
+- Indexing must be efficient enough
+- Searching & Query response time must be very faster.
+
+Google caters to all the above features (major methods of a search engine). In addition, they have good back-end above good coding and data structure choice: they use distributed computing
+systems around the globe to ensure faster response times.
+
+Google Architecture Overview:
+
+In Google, the web crawling (downloading of web pages)
+is done by several distributed crawlers ,which is a computer
+program that browses the World Wide Web by employing
+many Computers.URLserver sends lists of URLs(uniform
+resource locator) to be fetched to the crawlers. The web pages
+that are fetched are then sent to the store server. The store
+server then compresses and stores the web pages into a
+repository. Every web page has an associated ID number called a docID which is assigned whenever a new URL is
+parsed out of a web page. The indexer and the sorter perform
+indexing functions and read the repository, uncompress the
+documents, and parse them. Each document is converted into
+a set of word occurrences called hits. The hits record the
+word, position in document, an approximation of font size,
+and capitalization. The indexer distributes these hits into a set
+of "barrels", creating a partially sorted forward index. The
+indexer performs another important function. It parses out all
+the links in every web page and stores important information
+about them in an anchors file. This file contains enough
+information to determine where each link points from and to,
+and the text of the link.
+The URLresolver reads the anchors file and converts
+relative URLs into absolute URLs and in turn into docIDs. It
+puts the anchor text into the forward index, associated with
+the docID that the anchor points to. It also generates a
+database of links which are pairs of docIDs. The links
+database is used to compute PageRanks for all the
+documents.
+The sorter takes the barrels, which are sorted by docID and
+resorts them by wordID to generate the inverted index. This
+is done in place so that little temporary space is needed for
+this operation. The sorter also produces a list of wordIDs and
+offsets into the inverted index. A program called
+DumpLexicon takes this list together with the lexicon
+produced by the indexer and generates a new lexicon to be
+used by the searcher. The searcher is run by a web server and
+uses the lexicon built by DumpLexicon together with the
+inverted index and the Page Ranks to answer queries[2].
+ 

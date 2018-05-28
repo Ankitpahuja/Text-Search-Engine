@@ -1,0 +1,8 @@
+http://himmele.blogspot.in/2011/04/build-your-own-internet-search-engine.html
+http://www.jpgtutorials.com/lucene-full-text-search-in-java
+https://www.analyticbridge.datasciencecentral.com/profiles/blogs/how-to-build-a-search-engine-part-1
+https://machinelearningblogs.com/2016/12/12/how-to-build-a-search-engine-part-1/
+https://www.roseindia.net/sourcecode/searchengine/download.shtml
+
+
+https://www.java-tips.org/search-engine.html --Imp
